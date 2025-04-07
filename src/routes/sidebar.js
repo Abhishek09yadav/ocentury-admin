@@ -103,32 +103,32 @@ const sidebar = [
     ],
   },
 
-  {
-    icon: FiSlack,
-    name: "Pages",
-    routes: [
-      // submenu
+  // {
+  //   icon: FiSlack,
+  //   name: "Pages",
+  //   routes: [
+  //     // submenu
 
-      {
-        path: "/404",
-        name: "404",
-      },
-      {
-        path: "/coming-soon",
-        name: "Coming Soon",
-      },
-    ],
-  },
-  {
-    path: "/telecallers", // the url
-    icon: FiGrid, // icon
-    name: "Telecallers", // name that appear in Sidebar
-  },
-  {
-    path: "/storepartners", // the url
-    icon: FiGrid, // icon
-    name: "Store Partners", // name that appear in Sidebar
-  },
+  //     {
+  //       path: "/404",
+  //       name: "404",
+  //     },
+  //     {
+  //       path: "/coming-soon",
+  //       name: "Coming Soon",
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: "/telecallers", // the url
+  //   icon: FiGrid, // icon
+  //   name: "Telecallers", // name that appear in Sidebar
+  // },
+  // {
+  //   path: "/storepartners", // the url
+  //   icon: FiGrid, // icon
+  //   name: "Store Partners", // name that appear in Sidebar
+  // },
 ];
 
 export default sidebar;
