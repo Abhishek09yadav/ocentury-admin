@@ -123,7 +123,8 @@ const OrderInvoice = () => {
                   {globalSetting?.address} <br />
                   {globalSetting?.contact} <br />{" "}
                   <span> {globalSetting?.email} </span> <br />
-                  {globalSetting?.website}
+                  {/* {globalSetting?.website} */}
+                  <span>ocentury.in</span>
                 </p>
               </div>
             </div>
