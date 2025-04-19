@@ -347,7 +347,7 @@ const ProductDrawer = ({ id }) => {
                   <Error errorName={errors.stock} />
                 </div>
               </div>
-              <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6 relative">
+              {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6 relative">
                 <LabelArea label={"Commission (%)"} />
                 <div className="col-span-8 sm:col-span-4">
                   <InputValueFive
@@ -363,7 +363,7 @@ const ProductDrawer = ({ id }) => {
                   />
                   <Error errorName={errors.commission} />
                 </div>
-              </div>
+              </div> */}
 
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
                 <LabelArea label={t("ProductSlug")} />
