@@ -16,6 +16,16 @@ const MultiSelect = ({ options, value, onChange, labelledBy }) => {
 
   const isSelected = (option) => value.some((v) => v.value === option.value);
 
+  const allSelected = options.length > 0 && value.length === options.length;
+
+  const handleSelectAllToggle = () => {
+    if (allSelected) {
+      onChange([]);
+    } else {
+      onChange([...options]);
+    }
+  };
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -44,8 +54,24 @@ const MultiSelect = ({ options, value, onChange, labelledBy }) => {
       </div>
 
       {isOpen && (
-        // flex w-full h-10 justify-between font-sans rounded-tl rounded-tr bg-gray-200 px-4 py-3 text-left text-sm font-normal text-gray-700 hover:bg-gray-200
         <div className="absolute mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-y-auto z-50">
+          {/* Select All Toggle */}
+          <div
+            onClick={handleSelectAllToggle}
+            className="flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 cursor-pointer border-b"
+          >
+            <input
+              type="checkbox"
+              checked={allSelected}
+              readOnly
+              className="mr-2"
+            />
+            <span className="truncate">
+              {allSelected ? 'Deselect All' : 'Select All'}
+            </span>
+          </div>
+
+          {/* Options List */}
           {options.map((option) => (
             <div
               key={option.value}
