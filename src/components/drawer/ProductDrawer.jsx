@@ -276,7 +276,7 @@ const ProductDrawer = ({ id }) => {
                   <InputValue
                     disabled={isCombination}
                     register={register}
-                    maxValue={99999999999999999}
+                    maxValue={99999999999999999n}
                     minValue={1}
                     label="Original Price"
                     name="originalPrice"
