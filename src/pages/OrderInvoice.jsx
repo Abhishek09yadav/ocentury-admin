@@ -47,7 +47,7 @@ const OrderInvoice = () => {
   const { handleErrorNotification } = useError();
   const { handleDisableForDemo } = useDisableForDemo();
 
-  // console.log("data", data);
+  console.log("Data: ", data);
 
   const { currency, globalSetting, showDateFormat, getNumberTwo } =
     useUtilsFunction();
@@ -157,7 +157,8 @@ const OrderInvoice = () => {
                   {data?.user_info?.address?.substring(0, 30)}
                   <br />
                   {data?.user_info?.city}, {data?.user_info?.country},{" "}
-                  {data?.user_info?.zipCode}
+                  {data?.user_info?.zipCode},
+                  {data?.user_info?.state}
                 </span>
               </div>
             </div>
@@ -240,8 +241,8 @@ const OrderInvoice = () => {
         )}
       </div>
       {!loading && !error && (
-        <div className="mb-4 mt-3 flex md:flex-row flex-col items-center justify-between">
-          <PDFDownloadLink
+        <div className="mb-4 mt-3 flex md:flex-row flex-col items-center justify-end">
+          {/* <PDFDownloadLink
             document={
               <InvoiceForDownload
                 t={t}
@@ -265,10 +266,10 @@ const OrderInvoice = () => {
                 </button>
               )
             }
-          </PDFDownloadLink>
+          </PDFDownloadLink> */}
 
           <div className="flex md:mt-0 mt-3 gap-4 md:w-auto w-full">
-            {globalSetting?.email_to_customer && (
+            {/* {globalSetting?.email_to_customer && (
               <div className="flex justify-end md:w-auto w-full">
                 {isSubmitting ? (
                   <Button
@@ -299,7 +300,7 @@ const OrderInvoice = () => {
                   </button>
                 )}
               </div>
-            )}
+            )} */}
 
             <div className="md:w-auto w-full">
               <ReactToPrint
