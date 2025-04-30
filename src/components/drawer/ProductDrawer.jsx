@@ -43,8 +43,7 @@ const ProductDrawer = ({ id }) => {
   const { t } = useTranslation();
 
   const {
- 
-    tag,
+     tag,
     setTag,
     values,
     language,
@@ -438,7 +437,7 @@ const ProductDrawer = ({ id }) => {
                   {attributes?.map((attribute, i) => (
                     <div key={attribute._id}>
                       <div className="flex w-full h-10 justify-between font-sans rounded-tl rounded-tr bg-gray-200 px-4 py-3 text-left text-sm font-normal text-gray-700 hover:bg-gray-200">
-                        {"Select"}
+                        {"Select "}
                         {showingTranslateValue(attribute?.title)}
                       </div>
 

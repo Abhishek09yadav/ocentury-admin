@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MultiSelect } from "react-multi-select-component";
+import  MultiSelect from "../dropdown/MultiSelect"
 import useUtilsFunction from "@/hooks/useUtilsFunction";
 
 const AttributeOptionTwo = ({
